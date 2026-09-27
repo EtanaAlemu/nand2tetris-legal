@@ -1,0 +1,126 @@
+:root {
+  --bg: #0f1218;
+  --surface: #1a1f2a;
+  --text: #e8ecf4;
+  --muted: #9aa3b5;
+  --accent: #f0b429;
+  --link: #7eb6ff;
+  --border: #2a3344;
+  --max: 42rem;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: radial-gradient(1200px 600px at 20% -10%, #1e2a44 0%, var(--bg) 55%);
+  color: var(--text);
+  line-height: 1.65;
+  min-height: 100vh;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+.brand {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  margin: 0 0 0.75rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 2rem 0 0.75rem;
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.lead, .meta {
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
+.meta { font-size: 0.9rem; }
+
+a { color: var(--link); }
+a:hover { text-decoration: underline; }
+
+nav.crumbs {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+nav.crumbs a { color: var(--muted); text-decoration: none; }
+nav.crumbs a:hover { color: var(--link); }
+
+.cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem 1.35rem;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.card h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+  color: var(--text);
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+article p, article li { color: var(--text); }
+article ul { padding-left: 1.2rem; }
+article li { margin: 0.35rem 0; }
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.88em;
+  background: var(--surface);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.foot {
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.foot p { margin: 0.35rem 0; }
